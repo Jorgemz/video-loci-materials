@@ -1,0 +1,5 @@
+/* Localized Bundle Display Name */
+"CFBundleDisplayName" = "Prendi un Pet";
+
+/* Bundle name */
+"CFBundleName" = "PrendiunPet";
