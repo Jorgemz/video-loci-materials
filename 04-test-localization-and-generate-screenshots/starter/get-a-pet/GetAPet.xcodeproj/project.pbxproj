@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		098458C92631FEE0004F6806 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CE55ED025E1A40A009DAD47 /* Localizable.strings */; };
+		098458CC2631FEF1004F6806 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20123C78CE6009F7571 /* Main.storyboard */; };
 		180DC61523C78D9800486B1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180DC61423C78D9800486B1A /* LaunchScreen.storyboard */; };
 		185CB1FC23C78CE6009F7571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CB1FB23C78CE6009F7571 /* AppDelegate.swift */; };
 		185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */; };
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		098458C42631F717004F6806 /* GetAPet.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetAPet.xctestplan; sourceTree = "<group>"; };
 		180DC61423C78D9800486B1A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185CB1F823C78CE6009F7571 /* GetAPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetAPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185CB1FB23C78CE6009F7571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		7C65B57B25D95F9E0037F042 /* GetAPetUITests */ = {
 			isa = PBXGroup;
 			children = (
+				098458C42631F717004F6806 /* GetAPet.xctestplan */,
 				7C65B57C25D95F9E0037F042 /* GetAPetUITests.swift */,
 				7C65B57E25D95F9E0037F042 /* Info.plist */,
 			);
@@ -230,6 +234,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098458C92631FEE0004F6806 /* Localizable.strings in Resources */,
+				098458CC2631FEF1004F6806 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

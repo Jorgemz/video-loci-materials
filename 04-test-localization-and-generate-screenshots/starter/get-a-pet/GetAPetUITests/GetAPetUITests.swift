@@ -33,11 +33,34 @@
 import XCTest
 
 class GetAPetUITests: XCTestCase {
+  enum Localize {
+    static let cats = NSLocalizedString("Cats",bundle: Bundle(for: GetAPetUITests.self), comment: "")
+    static let max = NSLocalizedString("Max",bundle: Bundle(for: GetAPetUITests.self), comment: "")
+    static let petExplorer = NSLocalizedString("Pet Explorer",bundle: Bundle(for: GetAPetUITests.self), comment: "")
+    static let adopt = NSLocalizedString("Adopt",bundle: Bundle(for: GetAPetUITests.self), comment: "")
+    static let yourPet = NSLocalizedString("Your pet:",bundle: Bundle(for: GetAPetUITests.self), comment: "")
+  }
   func testExample() throws {
     let app = XCUIApplication()
     app.launch()
     // Use recording to get started writing UI tests.
     let collectionViewsQuery = app.collectionViews
 
+    collectionViewsQuery
+      .buttons[Localize.cats].tap()
+    collectionViewsQuery
+      .cells[Localize.max].tap()
+        
+    let petExplorerButton =
+      app
+      .navigationBars["GetAPet.PetDetailView"]
+      .buttons[Localize.petExplorer]
+    petExplorerButton.tap()
+    collectionViewsQuery.cells["Oscar"].tap()
+    app.staticTexts[Localize.adopt].tap()
+    collectionViewsQuery.buttons[Localize.cats].tap()
+    collectionViewsQuery.cells["\(Localize.yourPet) Oscar"].tap()
+    petExplorerButton.tap()
+                
   }
 }
