@@ -38,10 +38,16 @@
 import SwiftUI
 import PlaygroundSupport
 class UserSettings: ObservableObject {
-    @Published var lang: String = "en"
+    @Published var lang: String = "da"
     var bundle: Bundle? {
-        return Bundle(path: Bundle.main.path(forResource: lang,
-                                             ofType: "lproj")!)
+        return
+          Bundle(
+            path:
+              Bundle
+              .main
+              .path(
+                forResource: lang,
+                ofType: "lproj")!)
     }
 }
 
@@ -50,7 +56,18 @@ struct ContentView: View {
     @EnvironmentObject var settings: UserSettings
 
     var body: some View {
-        Text("Birds")
+      NavigationView {
+        List {
+          Text("Birds", bundle: settings.bundle)
+          Text("Cats", bundle: settings.bundle)
+          Text("Chameleons", bundle: settings.bundle)
+          Button("Language: \(settings.lang)") {
+            settings.lang == "da"
+              ? (settings.lang = "en")
+              : (settings.lang = "da")
+          }
+        }.navigationTitle( Text("Your pet:", bundle: settings.bundle) )
+      }
     }
 }
 
