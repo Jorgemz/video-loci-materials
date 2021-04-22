@@ -31,6 +31,7 @@
 /// THE SOFTWARE.
 
 import XCTest
+import PetsLibrary
 
 class GetAPetUITests: XCTestCase {
   func testExample() throws {
@@ -42,7 +43,7 @@ class GetAPetUITests: XCTestCase {
       .buttons[
         NSLocalizedString(
           "Cats",
-          bundle: Bundle(for: GetAPetUITests.self),
+          bundle: PetsLibrary.bundle,
           comment: "")]
       .tap()
 
@@ -55,7 +56,7 @@ class GetAPetUITests: XCTestCase {
       .buttons[
         NSLocalizedString(
           "Pet Explorer",
-          bundle: Bundle(for: GetAPetUITests.self),
+          bundle: PetsLibrary.bundle,
           comment: "")]
 
     explorerButton.tap()
@@ -68,7 +69,7 @@ class GetAPetUITests: XCTestCase {
       .staticTexts[
         NSLocalizedString(
           "Adopt",
-          bundle: Bundle(for: GetAPetUITests.self),
+          bundle: PetsLibrary.bundle,
           comment: "")]
       .tap()
 
@@ -76,12 +77,12 @@ class GetAPetUITests: XCTestCase {
       .buttons[
         NSLocalizedString(
           "Cats",
-          bundle: Bundle(for: GetAPetUITests.self),
+          bundle: PetsLibrary.bundle,
           comment: "")]
       .tap()
 
     collectionViewsQuery
-      .cells["\(NSLocalizedString("Your pet:", bundle: Bundle(for: GetAPetUITests.self), comment: "")) Oscar"]
+      .cells["\(NSLocalizedString("Your pet:", bundle: PetsLibrary.bundle, comment: "")) Oscar"]
       .tap()
 
     explorerButton.tap()

@@ -16,11 +16,8 @@
 		7C3D647A25F53FA400D66FEA /* PetsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7C3D647925F53FA400D66FEA /* PetsLibrary */; };
 		7C42EA5A25EDA23F001705A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C42EA5825EDA21F001705A2 /* InfoPlist.strings */; };
 		7C65B57D25D95F9E0037F042 /* GetAPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C65B57C25D95F9E0037F042 /* GetAPetUITests.swift */; };
-		7C84793E25F17A800057105B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CE55ED025E1A40A009DAD47 /* Localizable.strings */; };
 		7C84794325F17AA00057105B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20123C78CE6009F7571 /* Main.storyboard */; };
-		7CE55ECE25E1A40A009DAD47 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CE55ED025E1A40A009DAD47 /* Localizable.strings */; };
 		D06304EA2526F46700C13362 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06304E92526F46700C13362 /* Item.swift */; };
-		D0D461DD251F626E004AD6F6 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D461DC251F626E004AD6F6 /* Pet.swift */; };
 		D0D461E0251F6B02004AD6F6 /* PetExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D461DF251F6B02004AD6F6 /* PetExplorerViewController.swift */; };
 		D0D461E32523C9C8004AD6F6 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D461E22523C9C8004AD6F6 /* PetDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,14 +48,10 @@
 		7C65B57E25D95F9E0037F042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C84793925F177EA0057105B /* GetAPet.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetAPet.xctestplan; sourceTree = "<group>"; };
 		7C84794225F17A940057105B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		7CE55ECF25E1A40A009DAD47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7CE55ED325E1A43F009DAD47 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Main.strings; sourceTree = "<group>"; };
-		7CE55ED425E1A43F009DAD47 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7CFEA5C825F04EC000C7D37F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		7CFEA5C925F04EC000C7D37F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7CFEA5CA25F04EC100C7D37F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D06304E92526F46700C13362 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		D0D461DC251F626E004AD6F6 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		D0D461DF251F6B02004AD6F6 /* PetExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetExplorerViewController.swift; sourceTree = "<group>"; };
 		D0D461E22523C9C8004AD6F6 /* PetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,7 +101,6 @@
 		185CB1FA23C78CE6009F7571 /* GetAPet */ = {
 			isa = PBXGroup;
 			children = (
-				D0D461DC251F626E004AD6F6 /* Pet.swift */,
 				D06304E92526F46700C13362 /* Item.swift */,
 				D0D461DF251F6B02004AD6F6 /* PetExplorerViewController.swift */,
 				D0D461E22523C9C8004AD6F6 /* PetDetailViewController.swift */,
@@ -119,7 +111,6 @@
 				180DC61423C78D9800486B1A /* LaunchScreen.storyboard */,
 				185CB20923C78CE8009F7571 /* Info.plist */,
 				7C42EA5825EDA21F001705A2 /* InfoPlist.strings */,
-				7CE55ED025E1A40A009DAD47 /* Localizable.strings */,
 			);
 			path = GetAPet;
 			sourceTree = "<group>";
@@ -232,7 +223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				180DC61523C78D9800486B1A /* LaunchScreen.storyboard in Resources */,
-				7CE55ECE25E1A40A009DAD47 /* Localizable.strings in Resources */,
 				185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */,
 				185CB20323C78CE6009F7571 /* Main.storyboard in Resources */,
 				7C42EA5A25EDA23F001705A2 /* InfoPlist.strings in Resources */,
@@ -243,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C84793E25F17A800057105B /* Localizable.strings in Resources */,
 				7C84794325F17AA00057105B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0D461DD251F626E004AD6F6 /* Pet.swift in Sources */,
 				185CB1FC23C78CE6009F7571 /* AppDelegate.swift in Sources */,
 				185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */,
 				D0D461E32523C9C8004AD6F6 /* PetDetailViewController.swift in Sources */,
@@ -323,16 +311,6 @@
 				7CFEA5C925F04EC000C7D37F /* it */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7CE55ED025E1A40A009DAD47 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7CE55ECF25E1A40A009DAD47 /* en */,
-				7CE55ED425E1A43F009DAD47 /* da */,
-				7CFEA5CA25F04EC100C7D37F /* it */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

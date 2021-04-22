@@ -36,6 +36,8 @@
 /// DEALINGS IN THE SOFTWARE.
 
 import UIKit
+import PetsLibrary
+
 class PetExplorerViewController: UICollectionViewController {
   // MARK: - Properties
   lazy var dataSource = makeDataSource()
@@ -51,7 +53,7 @@ class PetExplorerViewController: UICollectionViewController {
   // MARK: - Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationItem.title = NSLocalizedString("Pet Explorer", comment: "Navigation Title")
+    navigationItem.title = NSLocalizedString("Pet Explorer", bundle: PetsLibrary.bundle, comment: "Navigation Title")
     configureLayout()
     applyInitialSnapshots()
   }
@@ -134,8 +136,8 @@ extension PetExplorerViewController {
       }
       var configuration = cell.defaultContentConfiguration()
       configuration.text = pet.name
-      configuration.secondaryText = "\(pet.age) \(NSLocalizedString("years old", comment: "Age"))"
-      configuration.image = UIImage(named: pet.imageName)
+      configuration.secondaryText = "\(pet.age) \(NSLocalizedString("years old", bundle: PetsLibrary.bundle, comment: "Age"))"
+      configuration.image = UIImage(named: pet.imageName, in: PetsLibrary.bundle, compatibleWith: nil)
       configuration.imageProperties.maximumSize = CGSize(width: 40, height: 40)
       cell.contentConfiguration = configuration
       cell.accessories = [UICellAccessory.disclosureIndicator()]
@@ -158,13 +160,13 @@ extension PetExplorerViewController {
         return
       }
       var configuration = cell.defaultContentConfiguration()
-      configuration.text = "\(NSLocalizedString("Your pet:", comment: "name")) \(pet.name)"
-      configuration.secondaryText = "\(pet.age) \(NSLocalizedString("years old", comment: "Age"))"
-      configuration.image = UIImage(named: pet.imageName)
+      configuration.text = "\(NSLocalizedString("Your pet:", bundle: PetsLibrary.bundle, comment: "name")) \(pet.name)"
+      configuration.secondaryText = "\(pet.age) \(NSLocalizedString("years old", bundle: PetsLibrary.bundle, comment: "Age"))"
+      configuration.image = UIImage(named: pet.imageName, in: PetsLibrary.bundle, compatibleWith: nil)
       configuration.imageProperties.maximumSize = CGSize(width: 40, height: 40)
       cell.contentConfiguration = configuration
       cell.accessories = [.disclosureIndicator()]
-      cell.accessibilityIdentifier = "\(NSLocalizedString("Your pet:", comment: "")) \(pet.name)"
+      cell.accessibilityIdentifier = "\(NSLocalizedString("Your pet:", bundle: PetsLibrary.bundle, comment: "")) \(pet.name)"
     }
   }
 }

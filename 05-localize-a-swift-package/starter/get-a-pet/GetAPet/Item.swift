@@ -36,6 +36,7 @@
 /// DEALINGS IN THE SOFTWARE.
 
 import Foundation
+import PetsLibrary
 
 struct Item: Hashable {
   let title: String

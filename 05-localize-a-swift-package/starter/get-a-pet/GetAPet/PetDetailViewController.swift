@@ -36,6 +36,7 @@
 /// DEALINGS IN THE SOFTWARE.
 
 import UIKit
+import PetsLibrary
 
 protocol PetDetailViewControllerDelegate: class {
   func petDetailViewController(_ petDetailViewController: PetDetailViewController, didAdoptPet pet: Pet)
@@ -66,9 +67,9 @@ class PetDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     adoptButton.isHidden = isAdopted
-    imageView.image = UIImage(named: pet.imageName)
-    name.text = isAdopted ? "\(NSLocalizedString("Your pet:", comment: "name")) \(pet.name)" : pet.name
-    age.text = "\(pet.age) \(NSLocalizedString("years old", comment: "Age"))"
+    imageView.image = UIImage(named: pet.imageName, in: PetsLibrary.bundle, compatibleWith: nil)
+    name.text = isAdopted ? "\(NSLocalizedString("Your pet:", bundle: PetsLibrary.bundle, comment: "name")) \(pet.name)" : pet.name
+    age.text = "\(pet.age) \(NSLocalizedString("years old", bundle: PetsLibrary.bundle, comment: "Age"))"
   }
 }
 

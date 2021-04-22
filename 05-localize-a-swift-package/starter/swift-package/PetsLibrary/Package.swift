@@ -41,6 +41,7 @@ import PackageDescription
 
 let package = Package(
   name: "PetsLibrary",
+  defaultLocalization: "en",
   products: [
     .library(
       name: "PetsLibrary",
@@ -48,7 +49,8 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "PetsLibrary"
+      name: "PetsLibrary",
+      resources: [.process("Resources")]
     )
   ]
 )

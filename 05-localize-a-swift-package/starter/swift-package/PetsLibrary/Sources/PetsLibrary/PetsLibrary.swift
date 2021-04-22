@@ -37,6 +37,8 @@
 
 import Foundation
 
+public let bundle = Bundle.module
+
 public struct Pet: Hashable {
   public enum Category: CaseIterable, CustomStringConvertible {
     case birds, cats, chameleons, cows, dogs, monkeys, penguins, pigs, rats, snakes, squirrels
@@ -57,47 +59,47 @@ extension Pet.Category {
     switch self {
     case .birds:
       return NSLocalizedString(
-        "Birds",
+        "Birds", bundle: bundle,
         comment: "Birds are warm-blooded, egg-laying animals that have vertebrae, or a backbone. ")
     case .cats:
       return NSLocalizedString(
-        "Cats",
+        "Cats", bundle: bundle,
         comment: "Cats, are small, carnivorous (meat-eating) mammals, of the family Felidae.")
     case .chameleons:
       return NSLocalizedString(
-        "Chameleons",
+        "Chameleons", bundle: bundle,
         comment: "Chameleons  are a distinctive and highly specialized clade of Old World lizards with 202 species.")
     case .cows:
       return NSLocalizedString(
-        "Cows",
+        "Cows", bundle: bundle,
         comment: "Cows are large grazing animals with two-toed or cloven hooves and a four-chambered stomach.")
     case .dogs:
       return NSLocalizedString(
-        "Dogs",
+        "Dogs", bundle: bundle,
         comment: "Dogs are domesticated mammals, not natural wild animals. They were originally bred from wolves.")
     case .monkeys:
       return NSLocalizedString(
-        "Monkeys",
+        "Monkeys", bundle: bundle,
         comment: "Monkeys are tree-dwelling simians and they are intelligent, social animals.")
     case .penguins:
       return NSLocalizedString(
-        "Penguins",
+        "Penguins", bundle: bundle,
         comment: "A penguin has a large head, short neck, and elongated body. The tail is short, and wedge-shaped.")
     case .pigs:
       return NSLocalizedString(
-        "Pigs",
+        "Pigs", bundle: bundle,
         comment: "Pigs are stout-bodied, short-legged, with thick skin usually sparsely coated with short bristles.")
     case .rats:
       return NSLocalizedString(
-        "Rats",
+        "Rats", bundle: bundle,
         comment: "The rat is a medium-sized rodent. Rats are omnivores, they eat lots of different types of food.")
     case .snakes:
       return NSLocalizedString(
-        "Snakes",
+        "Snakes", bundle: bundle,
         comment: "Snakes are limbless reptiles with long, cylindrical bodies, lidless eyes, and a forked tongue. ")
     case .squirrels:
       return NSLocalizedString(
-        "Squirrels",
+        "Squirrels", bundle: bundle,
         comment: "Squirrels typically have slender bodies with bushy tails and large eyes.")
     }
   }
